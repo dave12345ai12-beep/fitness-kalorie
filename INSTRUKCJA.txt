@@ -1,0 +1,46 @@
+KROK I KCAL — jak wrzucić aplikację na GitHub Pages
+====================================================
+
+Zawartość paczki:
+  index.html      - cała aplikacja
+  manifest.json   - pozwala zainstalować aplikację na telefonie
+  sw.js           - działanie bez internetu
+  icons/          - ikony aplikacji
+  .nojekyll       - pusty plik, mówi GitHubowi, żeby nic nie przerabiał
+
+1. UTWÓRZ REPOZYTORIUM
+   - Wejdź na github.com i zaloguj się.
+   - Kliknij "+" w prawym górnym rogu, potem "New repository".
+   - Nazwa: krok-kcal
+   - Zaznacz "Public" i kliknij "Create repository".
+
+2. WGRAJ PLIKI
+   - Rozpakuj ZIP na komputerze.
+   - W nowym repozytorium kliknij "uploading an existing file"
+     (albo "Add file" -> "Upload files").
+   - Przeciągnij WSZYSTKIE pliki i folder "icons" z rozpakowanej paczki
+     (nie sam folder z paczką, tylko jego zawartość).
+   - Kliknij "Commit changes".
+   Uwaga: plik .nojekyll może być ukryty w systemie. Jeśli go nie widać,
+   nic się nie stanie — aplikacja działa i bez niego.
+
+3. WŁĄCZ GITHUB PAGES
+   - W repozytorium: "Settings" -> "Pages" (menu po lewej).
+   - "Source": Deploy from a branch.
+   - "Branch": main, folder: / (root). Kliknij "Save".
+   - Po 1-2 minutach aplikacja będzie pod adresem:
+       https://dawidek12311111.github.io/krok-kcal/
+
+4. ZAINSTALUJ NA TELEFONIE
+   - Otwórz ten adres w Edge (lub Chrome) na telefonie.
+   - Menu (…) -> "Dodaj do telefonu" / "Zainstaluj aplikację".
+   - Ikona Krok i Kcal pojawi się na ekranie głównym.
+
+AKTUALIZACJA W PRZYSZŁOŚCI
+   - Wgraj nowy index.html tak samo (Add file -> Upload files) i zatwierdź.
+   - W pliku sw.js zmień "krok-kcal-v1" na "krok-kcal-v2" (v3, v4...),
+     żeby telefon szybciej pobrał nową wersję.
+
+DANE
+   - Konta, kroki i posiłki zapisują się w pamięci przeglądarki na danym
+     telefonie. Wyczyszczenie danych przeglądarki je usuwa.
